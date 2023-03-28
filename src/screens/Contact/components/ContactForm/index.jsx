@@ -65,168 +65,6 @@ const ContactForm = () => {
     });
   };
 
-  const inputs = [
-    {
-      component: (
-        <S.InputLabel>
-          First Name
-          <S.FormInput
-            value={formData.firstname}
-            name="firstname"
-            onChange={handleDataChange}
-            onBlur={(e) => blurHandler(e)}
-            errorText={
-              isDirty.firstname && inputError.firstname
-                ? inputError.firstname
-                : ""
-            }
-          />
-        </S.InputLabel>
-      ),
-      key: "first_name",
-    },
-    {
-      component: (
-        <S.InputLabel>
-          Last Name
-          <S.FormInput
-            value={formData.lastname}
-            name="lastname"
-            onChange={handleDataChange}
-            onBlur={(e) => blurHandler(e)}
-            errorText={
-              isDirty.lastname && inputError.lastname ? inputError.lastname : ""
-            }
-          />
-        </S.InputLabel>
-      ),
-      key: "last_name",
-    },
-    {
-      component: (
-        <S.InputLabel>
-          Email
-          <S.FormInput
-            value={formData.email}
-            name="email"
-            onChange={handleDataChange}
-            onBlur={(e) => blurHandler(e)}
-            errorText={
-              isDirty.email && inputError.email ? inputError.email : ""
-            }
-          />
-        </S.InputLabel>
-      ),
-      key: "email",
-    },
-    {
-      component: (
-        <S.InputLabel>
-          Phone Number
-          <S.FormInput
-            value={formData.phoneNumber}
-            name="phoneNumber"
-            onChange={handleDataChange}
-            onBlur={(e) => blurHandler(e)}
-            errorText={
-              isDirty.phoneNumber && inputError.phoneNumber
-                ? inputError.phoneNumber
-                : ""
-            }
-          />
-        </S.InputLabel>
-      ),
-      key: "name",
-    },
-  ];
-
-  const checkBoxes = [
-    {
-      component: (
-        <S.CheckboxLabel>
-          <Checkbox
-            checked={formData.check1}
-            onChange={handleCheckboxChange}
-            name="check1"
-            sx={{
-              color: "#e0e0e0",
-              "&.Mui-checked": {
-                color: "#000000",
-              },
-            }}
-            icon={<CircleUnchecked />}
-            checkedIcon={<CircleChecked />}
-          />
-          General Inquiry
-        </S.CheckboxLabel>
-      ),
-      key: "check1",
-    },
-    {
-      component: (
-        <S.CheckboxLabel>
-          <Checkbox
-            checked={formData.check2}
-            onChange={handleCheckboxChange}
-            name="check2"
-            sx={{
-              color: "#e0e0e0",
-              "&.Mui-checked": {
-                color: "#000000",
-              },
-            }}
-            icon={<CircleUnchecked />}
-            checkedIcon={<CircleChecked />}
-          />
-          General Inquiry
-        </S.CheckboxLabel>
-      ),
-      key: "check2",
-    },
-    {
-      component: (
-        <S.CheckboxLabel>
-          <Checkbox
-            checked={formData.check3}
-            onChange={handleCheckboxChange}
-            name="check3"
-            sx={{
-              color: "#e0e0e0",
-              "&.Mui-checked": {
-                color: "#000000",
-              },
-            }}
-            icon={<CircleUnchecked />}
-            checkedIcon={<CircleChecked />}
-          />
-          General Inquiry
-        </S.CheckboxLabel>
-      ),
-      key: "check3",
-    },
-    {
-      component: (
-        <S.CheckboxLabel>
-          <Checkbox
-            checked={formData.check4}
-            onChange={handleCheckboxChange}
-            name="check4"
-            sx={{
-              color: "#e0e0e0",
-              "&.Mui-checked": {
-                color: "#000000",
-              },
-            }}
-            icon={<CircleUnchecked />}
-            checkedIcon={<CircleChecked />}
-          />
-          General Inquiry
-        </S.CheckboxLabel>
-      ),
-      key: "check4",
-    },
-  ];
-
   const onSubmit = (e) => {
     e.preventDefault();
     alert(
@@ -248,10 +86,122 @@ const ContactForm = () => {
 
   return (
     <S.Wrapper onSubmit={onSubmit}>
-      {inputs.map((item) => item.component)}
+      <S.InputLabel>
+        First Name
+        <S.FormInput
+          value={formData.firstname}
+          name="firstname"
+          onChange={handleDataChange}
+          onBlur={(e) => blurHandler(e)}
+          errorText={
+            isDirty.firstname && inputError.firstname
+              ? inputError.firstname
+              : ""
+          }
+        />
+      </S.InputLabel>
+      <S.InputLabel>
+        Last Name
+        <S.FormInput
+          value={formData.lastname}
+          name="lastname"
+          onChange={handleDataChange}
+          onBlur={(e) => blurHandler(e)}
+          errorText={
+            isDirty.lastname && inputError.lastname ? inputError.lastname : ""
+          }
+        />
+      </S.InputLabel>
+      <S.InputLabel>
+        Email
+        <S.FormInput
+          value={formData.email}
+          name="email"
+          onChange={handleDataChange}
+          onBlur={(e) => blurHandler(e)}
+          errorText={isDirty.email && inputError.email ? inputError.email : ""}
+        />
+      </S.InputLabel>
+      <S.InputLabel>
+        Phone Number
+        <S.FormInput
+          value={formData.phoneNumber}
+          name="phoneNumber"
+          onChange={handleDataChange}
+          onBlur={(e) => blurHandler(e)}
+          errorText={
+            isDirty.phoneNumber && inputError.phoneNumber
+              ? inputError.phoneNumber
+              : ""
+          }
+        />
+      </S.InputLabel>
       <S.CustomSelect>
         <S.SelectTitle>Select Subject?</S.SelectTitle>
-        {checkBoxes.map((item) => item.component)}
+        <S.CheckboxLabel>
+          <Checkbox
+            checked={formData.check1}
+            onChange={handleCheckboxChange}
+            name="check1"
+            sx={{
+              color: "#e0e0e0",
+              "&.Mui-checked": {
+                color: "#000000",
+              },
+            }}
+            icon={<CircleUnchecked />}
+            checkedIcon={<CircleChecked />}
+          />
+          General Inquiry
+        </S.CheckboxLabel>
+        <S.CheckboxLabel>
+          <Checkbox
+            checked={formData.check2}
+            onChange={handleCheckboxChange}
+            name="check2"
+            sx={{
+              color: "#e0e0e0",
+              "&.Mui-checked": {
+                color: "#000000",
+              },
+            }}
+            icon={<CircleUnchecked />}
+            checkedIcon={<CircleChecked />}
+          />
+          General Inquiry
+        </S.CheckboxLabel>
+        <S.CheckboxLabel>
+          <Checkbox
+            checked={formData.check3}
+            onChange={handleCheckboxChange}
+            name="check3"
+            sx={{
+              color: "#e0e0e0",
+              "&.Mui-checked": {
+                color: "#000000",
+              },
+            }}
+            icon={<CircleUnchecked />}
+            checkedIcon={<CircleChecked />}
+          />
+          General Inquiry
+        </S.CheckboxLabel>
+        <S.CheckboxLabel>
+          <Checkbox
+            checked={formData.check4}
+            onChange={handleCheckboxChange}
+            name="check4"
+            sx={{
+              color: "#e0e0e0",
+              "&.Mui-checked": {
+                color: "#000000",
+              },
+            }}
+            icon={<CircleUnchecked />}
+            checkedIcon={<CircleChecked />}
+          />
+          General Inquiry
+        </S.CheckboxLabel>
       </S.CustomSelect>
       <S.MessageLabel>
         Message
