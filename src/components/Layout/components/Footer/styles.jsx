@@ -125,13 +125,6 @@ export const CustomInput = styled(Input)`
 export const CustomButton = styled(Button)`
   && {
     padding: 11px 22px 10px 22px;
-    font-family: "Poppins", sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 11px;
-    line-height: 18px;
-    color: #ffffff;
-    background-color: #000000;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
   }

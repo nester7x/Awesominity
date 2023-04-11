@@ -13,7 +13,7 @@ const NotFound = () => (
         style={{ width: "50%", display: "block", margin: "0 auto" }}
       />
       <S.Message>PAGE NOT FOUND</S.Message>
-      <S.Btn to="/contact">go back home</S.Btn>
+      <S.Btn to="/">go back home</S.Btn>
     </S.Info>
   </S.Wrapper>
 );

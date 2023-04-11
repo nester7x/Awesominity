@@ -5,6 +5,11 @@ import { device } from "utils/mediaQueries";
 
 export default styled(Button)`
   && {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 18px;
     background: #000000;
     color: #ffffff;
     text-transform: uppercase;

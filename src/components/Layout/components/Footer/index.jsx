@@ -114,7 +114,7 @@ const Footer = ({ inputValue, handleInputChange, onSubmit }) => {
     <S.Footer>
       <S.FooterInner>
         <S.FooterLogoWrapper>
-          <S.FooterLogo to="/">Logo Here</S.FooterLogo>
+          <S.FooterLogo to="/">Awesominity</S.FooterLogo>
         </S.FooterLogoWrapper>
         <S.FooterInfo>
           {footerLinks.map((section, index) => (
